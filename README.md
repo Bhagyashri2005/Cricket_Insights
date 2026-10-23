@@ -2,145 +2,122 @@
 
 [**Live Demo App**](https://cricbuzz-livestats.streamlit.app/)
 
-An interactive multi-page cricket analytics dashboard built with **Python, SQLite, and Streamlit**.
-It integrates cricket match data (sample JSON or live API), stores it in a database, and provides live dashboards, visualizations, and SQL query practice.
-
-
-
----
+An interactive, multi-page cricket analytics dashboard built using **Python, SQLite, Pandas, and Streamlit**. The application allows users to explore cricket match information, player records, scorecards, SQL queries, database operations, and visualizations.
 
 ## Features
-- 🌐 API integration (Cricbuzz/unofficial JSON or sample dataset)
-- 🗄️ SQLite database backend
-- 📊 Streamlit multi-page dashboard:
-  
-  - Home
-    
-    ![Home Page](screenshots/Home.png)
 
-  - Matches Overview
-  
-    ![Matches Page](screenshots/Matches.png)
-
-  - Players
-    
-    ![Players Page](screenshots/Players.png)
-
-  - Scorecards
-    
-    ![Scores](screenshots/Scores.png)
-
-  - SQL Queries (25 beginner–advanced questions)
-  
-    ![SQL Queries](screenshots/SQL_Queries.png)
-
-  - CRUD operations
-  
-    ![CRUD](screenshots/CRUD.png)
-  
-  - Visualizations (team, players, runs, wickets)
-  
-    ![Visualizations](screenshots/Visualizations.png)
-
-- 🔍 Custom SQL query interface
-- 📤 Export data to CSV
-- 📦 Deployable on Streamlit Cloud / Render
-
+- 🏏 Cricket match information and available score data
+- 🗄️ SQLite database integration
+- 📊 Multi-page Streamlit dashboard
+- 👥 Player and match information
+- 🔍 SQL query interface with beginner, intermediate, and advanced questions
+- ✍️ CRUD operations: Create, Read, Update, and Delete records
+- 📈 Data visualizations and analytics overview
+- 📝 Custom SQL query execution
+- 📤 Data exploration and analysis
 
 ## Tech Stack
-- **Python 3.12** (pandas, sqlite3, SQLAlchemy, requests)
-- **Streamlit** (for the web app)
-- **SQLite** (lightweight database)
-- **Tabulate** (pretty console output)
-- **SQLAlchemy** (connection handling)
-- **Pandas** (data wrangling)
-- **Requests** (API integration)
 
----
+- **Python** — application logic
+- **Streamlit** — interactive web dashboard
+- **SQLite** — database management
+- **SQL** — querying and analyzing cricket data
+- **Pandas** — data manipulation and tabular results
+- **Requests** — API requests, where configured
 
 ## Project Structure
 
-```
-cricbuzz-livestats/
-│
-├── streamlit_app.py # Main entry point
-├── logo.png # App logo
-├── requirements.txt # Project dependencies
-├── README.md # Project documentation
-├── cricket.db # SQLite database (generated)
-├── sample_cricket_data.json # Mock cricket data
-│
+```text
+Cricket_Insights/
+├── Streamlit_app.py
+├── requirements.txt
+├── README.md
+├── cricket.db
+├── query_db.py
 ├── utils/
-│ ├── create_db.py # Script to create & populate DB
-│ └── db_connection.py # Centralized DB functions
-│
-├── pages/
-│ ├── 1_Home.py
-│ ├── 2_Matches.py
-│ ├── 3_Players.py
-│ ├── 4_SQL_Queries.py
-│ ├── 5_CRUD.py
-│ ├── 6_Matches_CRUD.py
-│ ├── 7_Scores_CRUD.py
-│ ├── 8_Visualizations.py
-│ └── 9_Analytics_Overview.py
-
-
+│   ├── path_setup.py
+│   └── db_connection.py
+└── pages/
+    ├── 1_Home.py
+    ├── 2_Matches.py
+    ├── 3_Players.py
+    ├── 4_Scores.py
+    ├── 5_CRUD.py
+    ├── 6_Matches_CRUD.py
+    ├── 7_Scores_CRUD.py
+    ├── 8_SQL_Queries.py
+    ├── 9_Visualizations.py
+    └── 10_Analytics_Overview.py
 ```
----
 
-## Run the App
+## Getting Started
+
+### 1. Clone the repository
 
 ```bash
-
-\# Install dependencies
-
-pip install -r requirements.txt
-
-
-
-\# Run Streamlit app
-
-streamlit run streamlit\_app.py
-
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd Cricket_Insights
 ```
 
-## Description
+### 2. Install dependencies
 
-•	Home Page → Navigation + Project overview
+```bash
+python -m pip install -r requirements.txt
+```
 
-•	Matches & Players Pages → Explore raw data
+### 3. Run the application
 
-•	Scorecards & Visuals → Runs, wickets, comparisons
+```bash
+python -m streamlit run Streamlit_app.py
+```
 
-•	SQL Queries Page → 25 beginner → advanced queries + custom query box
+Open the local URL displayed in the terminal, usually `http://localhost:8501`.
 
-•	CRUD Pages → Add, update, delete records
+## Application Modules
 
-•	Analytics Overview → Leaderboards, KPIs, trends
+- **Home:** Project introduction and navigation.
+- **Matches:** Explore available cricket match records.
+- **Players:** View player information.
+- **Scores:** Explore available score records.
+- **SQL Queries:** Execute predefined and custom SQL queries.
+- **CRUD Operations:** Manage player records.
+- **Matches CRUD:** Manage match records.
+- **Scores CRUD:** Manage score records.
+- **Visualizations:** Explore cricket data through charts.
+- **Analytics Overview:** Review available analytics and summaries.
+
+## SQL Analytics
+
+The SQL interface organizes 25 practice questions into three levels:
+
+- **Beginner:** Basic filtering, grouping, sorting, and aggregate functions.
+- **Intermediate:** Multi-table analysis and more advanced query patterns.
+- **Advanced:** Cricket performance analysis and analytical query examples.
+
+The implemented queries operate on the available database schema and sample data. The completeness of each advanced analytical calculation depends on its implementation and available data.
+
+## Future Enhancements
+
+- Integrate and validate a live cricket data API.
+- Expand player and match statistics.
+- Improve advanced SQL analytics.
+- Add more interactive visualizations.
+- Enhance deployment and database management.
 
 ## Use Cases
 
-•	Sports Media & Broadcasting
+- Sports data exploration
+- Cricket performance analysis
+- SQL learning and practice
+- Database management demonstrations
+- Data analytics portfolio projects
 
-•	Fantasy Cricket Platforms
+## Author
 
-•	Cricket Analytics Firms
+**Bhagyashri Patil**
 
-•	Educational SQL Projects
-
-## Credits
-
-•	Mock data created for portfolio purposes
-
-•	Inspired by Cricbuzz APIs and community-built cricket datasets
+Computer Engineering | Python • SQL • Streamlit • Data Analytics
 
 ---
 
-## 👩‍💻 Author
-Ritu Thakur
-Data Analyst | SQL • Power BI • Python • Streamlit
-
-📍 Hyderabad, India
-
-📧 ritut452@gmail.com
+*This project demonstrates cricket data exploration, SQL querying, database operations, and interactive visualization using Python and Streamlit.*
